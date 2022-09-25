@@ -1,5 +1,6 @@
 #include <iostream>
 #include "os_info.h"
+#include "colors.h"
 
 int main() {
     const int SECONDS_IN_DAY = 86400;
@@ -17,7 +18,7 @@ int main() {
     const std::string user = get_user();
     const std::string shell = get_shell();
 
-    std::cout << "User -> " << user << "\nKernel -> " << kernel << "\nDistro -> " << distro_name << "\nUptime -> " << days << "D " << hours << "H " << minutes << "M" << "\nShell -> " << shell << std::endl;
+    std::cout << RED << "User " << GRAY << "-> " << RESET << user << YELLOW << "\nKernel " << GRAY << "-> " << RESET << kernel << BLUE << "\nDistro " << GRAY << "-> " << RESET << distro_name << GREEN << "\nUptime " << GRAY << "-> " << RESET << days << "D " << hours << "H " << minutes << "M" << MAGENTA << "\nShell " << GRAY << "-> " << RESET << shell << std::endl;
 
     return 0;
 }
