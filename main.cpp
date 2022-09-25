@@ -7,10 +7,12 @@ int main() {
     const int SECONDS_IN_HOUR = 3600;
     const int SECONDS_IN_MINUTE = 60;
     
-    const int uptime = get_uptime();
+    int uptime = get_uptime();
 
     const int days = uptime / SECONDS_IN_DAY;
+    uptime -= days * SECONDS_IN_DAY;
     const int hours = uptime / SECONDS_IN_HOUR;
+    uptime -= hours * SECONDS_IN_HOUR;
     const int minutes = uptime / SECONDS_IN_MINUTE;
 
     const std::string kernel = get_kernel();
